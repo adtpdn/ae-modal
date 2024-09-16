@@ -1,0 +1,137 @@
+:root {
+  --orange : #EB5C1C;
+  --grey : #D9D9D9;
+
+  --label: clamp(1.5rem, 1.1538rem + 1.5385vw, 3rem);
+  --sub-label: clamp(1.125rem, 1.024rem + 0.4487vw, 1.5625rem);
+  --input-form: clamp(0.875rem, 0.8173rem + 0.2564vw, 1.125rem);
+  --modal-p: clamp(0.875rem, 0.8173rem + 0.2564vw, 1.125rem);
+}
+
+input::placeholder {
+  color: var(--grey);
+}
+
+body{
+  width: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 75px 100px;
+    width: 70%;
+    border-radius: 20px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Floating Logo */
+  .float-logo {
+    position: absolute;
+    background-image: url(./asssets/logo.png);
+    background-size: cover;
+    top: 0;
+    right: 130px;
+    translate: clamp(5.625rem, 5.048rem + 2.564vi, 8.125rem);
+    width: 130px;
+    height:  130px;
+  }
+
+  .sub-label {
+    font-family: 'Figtree';
+    font-size: var(--sub-label);
+    color: var(--orange);
+    padding-bottom: 30px;
+  }
+
+  .label {
+    font-family: 'Figtree';
+    font-size: var(--label);
+    padding-bottom: 50px;
+  }
+
+  .body-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .wrapper-a {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 60%;
+  }
+
+  .wrapper-a p {
+    font-size: var(--modal-p);
+    font-family: 'Catamaran';
+  }
+
+  .wrapper-a input,
+  .wrapper-a select {
+    padding: 25px 20px;
+    border: 1.5px solid var(--grey);
+    border-radius: 10px;
+    font-size: var(--input-form);
+    font-family: 'Figtree';
+    
+  }
+
+  .wrapper-b {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width: 30%;
+  }
+
+  .button-wrapper button {
+    width: 100%;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 18px 0;
+    font-size: var(--modal-p);
+  }
+
+  /* Mobile Version */
+
+  @media screen and (max-width: 360px) {
+    .float-logo {
+      right: 90px;
+      width: 90px;
+      height: 90px;
+    }
+  }
