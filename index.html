@@ -3,67 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal Popup | Aden Energies</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-    </style>
+    <title>Scrollable Modal Example</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
-    <h2>Modal Example</h2>
+    <div class="content">
+        <h1>Main Content</h1>
+        <p>This is the main content of the page. It can be scrolled even when the modal is open.</p>
+        <button onclick="openModal()">Open Modal</button>
+        <!-- Add more content here to make the page scrollable -->
+    </div>
 
-    <button id="exampleBtn">Open Modal</button>
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+            <span class="close-btn" onclick="closeModal()"><img src="./assets/logo.png"></span>
+                
+                <div class="label-wrapper">
+                    <div class="sub-label">Fill the form</div>
+                    <div class="label">We will reach you</div>
+                </div>
+                
 
-
-    <div id="modal" class="modal">
-         
-        <div class="modal-content">
-            <span class="close"></span>
-            <div class="float-logo"></div>
-            <div class="sub-label">Fill the form</div>
-            <div class="label">We will reach you</div>
-            <div class="body-wrapper">
-                <div class="wrapper-a">
-                    <input type="text" placeholder="First name" required>
-                    <input type="text" placeholder="Last name" required>
-                    <input type="text" placeholder="Company address" required>
-                    <input type="text" placeholder="Corporate email" required>
-                    <select name="business-size" id="business-size">
-                        <option value="" disabled selected>Size of your business</option>
-                        <option value="">5 - 10</option>
-                        <option value="">10 - 20</option>
-                        <option value="">20 - 30</option>
-                    </select>
-                    <p>By submitting this form, I confirm that I have read the Privacy Policy and that I agree to the processing of my personal data by Aden Energies.</p>
-
-                    <div class="button-wrapper"><button>Send</button></div>
+                <div class="body-wrapper">
                     
-                </div>
-                <div class="wrapper-b">
-                    <div class="section-a">
-                        <div class="sub-label">Manage your equipment simply</div>
-                        <p>An all-in-one solution for the acquisition, management and renewal of your equipment:</p>
-                        <ul>
-                            <li>Evaluate Project Scope and Timeline</li>
-                            <li>Explore Funding Options</li>
-                            <li>Assess ROI Potential</li>
-                            <li>Align with Sustainability Goals</li>
-                            <li>Implement Strategic Financing</li>
-                        </ul>
+                    <div class="wrapper-a">
+                        <input type="text" placeholder="First name" required>
+                        <input type="text" placeholder="Last name" required>
+                        <input type="text" placeholder="Company address" required>
+                        <input type="text" placeholder="Corporate email" required>
+                        <select name="business-size" id="business-size">
+                            <option value="" disabled selected>Size of your business</option>
+                            <option value="">5 - 10</option>
+                            <option value="">10 - 20</option>
+                            <option value="">20 - 30</option>
+                        </select>
+                        <p>By submitting this form, I confirm that I have read the Privacy Policy and that I agree to the processing of my personal data by Aden Energies.</p>
+    
+                        <div class="button-wrapper"><a href=""class="btn-submit">Send</a></div>
+                        
                     </div>
-
-                    <div class="section-b">
-                        <div class="sub-label">Question?</div>
-                        <p>Contact a Energies expert</p>
+                    <div class="wrapper-b">
+                        <div class="section-a">
+                            <div class="sub-label">Manage your equipment simply</div>
+                            <p>An all-in-one solution for the acquisition, management and renewal of your equipment:</p>
+                            <ul>
+                                <li>Evaluate Project Scope and Timeline</li>
+                                <li>Explore Funding Options</li>
+                                <li>Assess ROI Potential</li>
+                                <li>Align with Sustainability Goals</li>
+                                <li>Implement Strategic Financing</li>
+                            </ul>
+                        </div>
+    
+                        <div class="section-b">
+                            <div class="sub-label">Question?</div>
+                            <p>Contact a Energies expert</p>
+                        </div>
+    
                     </div>
-
                 </div>
-            </div>
+
         </div>
-
-
-
     </div>
 
     <script src="./script.js"></script>
